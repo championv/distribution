@@ -58,20 +58,20 @@ information about each option that appears later in this page.
       fields:
         service: registry
         environment: staging
-      hooks:
-        - type: mail
-          disabled: true
-          levels:
-            - panic
-          options:
-            smtp:
-              addr: mail.example.com:25
-              username: mailuser
-              password: password
-              insecure: true
-            from: sender@example.com
-            to:
-              - errors@example.com
+    hooks:
+      - type: mail
+        disabled: true
+        levels:
+          - panic
+        options:
+          smtp:
+            addr: mail.example.com:25
+            username: mailuser
+            password: password
+            insecure: true
+          from: sender@example.com
+          to:
+            - errors@example.com
     loglevel: debug # deprecated: use "log"
     storage:
       filesystem:
